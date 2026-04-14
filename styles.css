@@ -413,7 +413,7 @@ a {
 
 @media (max-width: 860px) {
   .site-shell {
-    width: min(100% - 20px, 1120px);
+    width: min(1120px, calc(100% - 20px));
     padding-top: 16px;
   }
 
