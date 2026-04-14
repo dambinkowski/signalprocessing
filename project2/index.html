@@ -3,48 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project 2 - Audio File Encoding</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0d1117; color: #c9d1d9; }
-    nav { padding: 14px 20px; background: #161b22; border-bottom: 1px solid #30363d; }
-    nav a { color: #58a6ff; text-decoration: none; }
-    main { max-width: 980px; margin: 0 auto; padding: 28px 20px 40px; }
-    h1 { color: #e6edf3; margin-bottom: 10px; }
-    .desc { color: #8b949e; margin-bottom: 22px; line-height: 1.6; }
-    .section { margin-top: 20px; }
-    .section h2 { font-size: 1rem; color: #58a6ff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
-    .summary { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 14px; line-height: 1.65; }
-    .summary ul { margin-left: 18px; margin-top: 8px; }
-    .summary li { margin: 6px 0; }
-    .viewer { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 10px; }
-    iframe { width: 100%; min-height: 920px; border: 1px solid #30363d; border-radius: 6px; background: #fff; }
-  </style>
+  <title>Project 2 | Audio File Encoding</title>
+  <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <nav><a href="../index.html">Back to Portfolio</a></nav>
-  <main>
-    <h1>Project 2: Audio File Encoding</h1>
-    <p class="desc">Encoding and decoding WAV data using custom K-bit quantization to study compression and quality trade-offs.</p>
+  <div class="site-shell">
+    <nav class="top-nav">
+      <a href="../index.html">Back to portfolio</a>
+    </nav>
 
-    <section class="section">
-      <h2>Report Summary</h2>
-      <div class="summary">
-        <p>The report documents a two-part audio pipeline: encoding and decoding. The implementation reads WAV bytes, maps sample values into a reduced K-bit representation, and stores compact binary output.</p>
-        <ul>
-          <li>Encoding stage converts sample integers into K-bit codes and packs them into bytes for storage efficiency.</li>
-          <li>Decoding stage reconstructs sample values from the encoded bitstream to generate a playable output file.</li>
-          <li>The method highlights the relationship between bit depth, audible quality, and file size reduction.</li>
-        </ul>
+    <header class="page-hero">
+      <p class="eyebrow">Project 2</p>
+      <h1>Audio File Encoding</h1>
+      <p class="page-subtitle">
+        Custom K-bit audio quantization pipeline for encoding and decoding WAV files while
+        analyzing the trade-off between compression efficiency and output quality.
+      </p>
+      <div class="meta-row">
+        <span class="pill pill-accent">Audio Processing</span>
+        <span class="pill">Quantization</span>
+        <span class="pill">Compression Analysis</span>
+      </div>
+    </header>
+
+    <section class="content-card">
+      <div>
+        <p class="mini-label">Report Summary</p>
+        <div class="summary-box">
+          <p>
+            The workflow reads WAV samples, converts amplitude values to compact K-bit codes,
+            then reconstructs the signal to evaluate perceptual impact and storage gain.
+          </p>
+          <ul>
+            <li>Encoding maps raw samples into lower-bit representations and packs them efficiently.</li>
+            <li>Decoding restores playable sample values from the compact binary stream.</li>
+            <li>Experiments show how smaller K reduces file size but can increase audible distortion.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="preview-panel">
+        <h2 class="preview-title">Notebook Preview</h2>
+        <p class="preview-caption">Embedded Project 2 notebook export.</p>
+        <div class="embed-stack">
+          <div class="embed-card">
+            <h3 class="embed-title">Exercise 2</h3>
+            <iframe class="embed-frame tall" src="exercise2.html" title="Exercise 2"></iframe>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Notebook HTML (Embedded)</h2>
-      <div class="viewer">
-        <iframe src="exercise2.html" title="Exercise 2 HTML"></iframe>
-      </div>
-    </section>
-  </main>
+    <footer class="repo-footer">Signal Processing Portfolio</footer>
+  </div>
+  <script src="../embed-resize.js"></script>
 </body>
 </html>

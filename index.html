@@ -3,172 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="A portfolio site for signal processing projects spanning computer vision, audio, DSP, and speech analysis."
+  />
   <title>Signal Processing Portfolio</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      background: #0d1117;
-      color: #c9d1d9;
-      min-height: 100vh;
-    }
-
-    header {
-      background: linear-gradient(135deg, #161b22 0%, #1f2937 100%);
-      border-bottom: 1px solid #30363d;
-      padding: 3rem 2rem 2.5rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.4rem;
-      font-weight: 700;
-      color: #58a6ff;
-      letter-spacing: -0.5px;
-    }
-
-    header p {
-      margin-top: 0.6rem;
-      font-size: 1rem;
-      color: #8b949e;
-    }
-
-    main {
-      max-width: 960px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 10px;
-      padding: 1.5rem;
-      transition: border-color 0.2s, transform 0.2s;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .card:hover {
-      border-color: #58a6ff;
-      transform: translateY(-3px);
-    }
-
-    .card-num {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: #58a6ff;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .card h2 {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: #e6edf3;
-    }
-
-    .card p {
-      font-size: 0.875rem;
-      color: #8b949e;
-      line-height: 1.5;
-      flex: 1;
-    }
-
-    .tag {
-      display: inline-block;
-      font-size: 0.72rem;
-      background: #21262d;
-      border: 1px solid #30363d;
-      color: #58a6ff;
-      border-radius: 20px;
-      padding: 2px 10px;
-      margin-top: 0.25rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.8rem;
-      color: #484f58;
-      border-top: 1px solid #21262d;
-      margin-top: 4rem;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="site-shell">
+    <header class="hero">
+      <p class="eyebrow">Damian Binkowski</p>
+      <h1>Signal Processing Projects</h1>
+      <p class="hero-copy">
+        A complete portfolio of signal processing work including image analysis, audio encoding,
+        interactive web applications, DSP notebooks, and multilingual speech recognition.
+      </p>
+      <div class="hero-meta">
+        <span class="pill pill-accent">7 Completed Projects</span>
+        <span class="pill">Notebook + Web Demos</span>
+        <span class="pill">Computer Vision to Speech</span>
+      </div>
+    </header>
 
-  <header>
-    <h1>Signal Processing Portfolio</h1>
-    <p>A collection of 7 signal processing projects</p>
-  </header>
+    <main>
+      <section class="section-block">
+        <div class="section-heading">
+          <p class="section-label">Projects</p>
+          <h2>Project Collection</h2>
+        </div>
 
-  <main>
-    <div class="grid">
+        <div class="project-grid">
+          <a class="project-card" href="project1/index.html">
+            <span class="card-number">Project 1</span>
+            <h3>Moving Car Detection</h3>
+            <p>Detects and tracks moving vehicles in video and counts traffic heading toward downtown.</p>
+            <div class="card-footer">
+              <span class="tag">Computer Vision</span>
+              <span class="status complete">View Project</span>
+            </div>
+          </a>
 
-      <a class="card" href="project1/index.html">
-        <span class="card-num">Project 1</span>
-        <h2>Moving Car Detection &amp; Tracking</h2>
-        <p>Detect and track cars in video frames; count vehicles moving toward the city center using image signal processing techniques.</p>
-        <span class="tag">Computer Vision</span>
-      </a>
+          <a class="project-card" href="project2/index.html">
+            <span class="card-number">Project 2</span>
+            <h3>Audio File Encoding</h3>
+            <p>Custom WAV encoding and decoding with K-bit quantization to study quality vs compression.</p>
+            <div class="card-footer">
+              <span class="tag">Audio Processing</span>
+              <span class="status complete">View Project</span>
+            </div>
+          </a>
 
-      <a class="card" href="project2/index.html">
-        <span class="card-num">Project 2</span>
-        <h2>Audio File Encoding</h2>
-        <p>Encode WAV audio files using quantization with a configurable number of bits (K-value), exploring PCM and data compression.</p>
-        <span class="tag">Audio Processing</span>
-      </a>
+          <a class="project-card" href="project3/index.html">
+            <span class="card-number">Project 3</span>
+            <h3>Video Analysis Pipeline</h3>
+            <p>Inspects technical video properties and applies FFmpeg-based correction when values mismatch.</p>
+            <div class="card-footer">
+              <span class="tag">Video Processing</span>
+              <span class="status complete">View Project</span>
+            </div>
+          </a>
 
-      <a class="card" href="project3/index.html">
-        <span class="card-num">Project 3</span>
-        <h2>Video Analysis &amp; Processing</h2>
-        <p>Analyze video files field by field, compare against target values, and produce corrected output videos automatically.</p>
-        <span class="tag">Video Processing</span>
-      </a>
+          <a class="project-card" href="project4/index.html">
+            <span class="card-number">Project 4</span>
+            <h3>Interactive Visualizer</h3>
+            <p>Browser audio visualization app made with p5.js and p5.sound for dynamic playback visuals.</p>
+            <div class="card-footer">
+              <span class="tag">Web Audio</span>
+              <span class="status complete">View Project</span>
+            </div>
+          </a>
 
-      <a class="card" href="project4/index.html">
-        <span class="card-num">Project 4</span>
-        <h2>Interactive Audio Visualizer</h2>
-        <p>A browser-based audio visualization app built with p5.js and p5.sound, with logarithmic volume control.</p>
-        <span class="tag">Web App</span>
-      </a>
+          <a class="project-card" href="project5/index.html">
+            <span class="card-number">Project 5</span>
+            <h3>Feature Extraction App</h3>
+            <p>Real-time feature extraction in-browser using Meyda to drive analysis-based visual response.</p>
+            <div class="card-footer">
+              <span class="tag">Meyda + p5.js</span>
+              <span class="status complete">View Project</span>
+            </div>
+          </a>
 
-      <a class="card" href="project5/index.html">
-        <span class="card-num">Project 5</span>
-        <h2>Audio Feature Extraction App</h2>
-        <p>Real-time audio feature extraction in the browser using p5.js and the Meyda audio analysis library.</p>
-        <span class="tag">Web App</span>
-      </a>
+          <a class="project-card" href="project6/index.html">
+            <span class="card-number">Project 6</span>
+            <h3>ThinkDSP Exercises</h3>
+            <p>Three notebook tasks covering frequency analysis, filtering, and transformation workflows.</p>
+            <div class="card-footer">
+              <span class="tag">DSP Theory</span>
+              <span class="status complete">View Project</span>
+            </div>
+          </a>
 
-      <a class="card" href="project6/index.html">
-        <span class="card-num">Project 6</span>
-        <h2>DSP Exercises with ThinkDSP</h2>
-        <p>Three signal processing tasks covering frequency analysis, filtering, and convolution using the ThinkDSP framework.</p>
-        <span class="tag">DSP Theory</span>
-      </a>
+          <a class="project-card" href="project7/index.html">
+            <span class="card-number">Project 7</span>
+            <h3>Speech Analysis</h3>
+            <p>DeepSpeech-based recognition and WER comparison across English, Spanish, and Italian speech.</p>
+            <div class="card-footer">
+              <span class="tag">Speech Processing</span>
+              <span class="status complete">View Project</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
 
-      <a class="card" href="project7/index.html">
-        <span class="card-num">Project 7</span>
-        <h2>Multilingual Speech Analysis</h2>
-        <p>Analysis and classification of speech recordings in English, Spanish, and Italian using acoustic signal processing methods.</p>
-        <span class="tag">Speech Processing</span>
-      </a>
-
-    </div>
-  </main>
-
-  <footer>Signal Processing Portfolio</footer>
-
+    <footer class="repo-footer">Signal Processing Portfolio</footer>
+  </div>
 </body>
 </html>

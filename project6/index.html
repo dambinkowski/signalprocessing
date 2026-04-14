@@ -3,51 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project 6 - DSP Exercises with ThinkDSP</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0d1117; color: #c9d1d9; }
-    nav { padding: 14px 20px; background: #161b22; border-bottom: 1px solid #30363d; }
-    nav a { color: #58a6ff; text-decoration: none; }
-    main { max-width: 980px; margin: 0 auto; padding: 28px 20px 40px; }
-    h1 { color: #e6edf3; margin-bottom: 10px; }
-    .desc { color: #8b949e; margin-bottom: 22px; line-height: 1.6; }
-    .section { margin-top: 20px; }
-    .section h2 { font-size: 1rem; color: #58a6ff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
-    .summary { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 14px; line-height: 1.65; }
-    .viewer { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 10px; margin-bottom: 14px; }
-    .viewer h3 { color: #e6edf3; font-size: 0.95rem; margin-bottom: 8px; }
-    iframe { width: 100%; min-height: 920px; border: 1px solid #30363d; border-radius: 6px; background: #fff; }
-  </style>
+  <title>Project 6 | DSP Exercises with ThinkDSP</title>
+  <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <nav><a href="../index.html">Back to Portfolio</a></nav>
-  <main>
-    <h1>Project 6: DSP Exercises with ThinkDSP</h1>
-    <p class="desc">Three practical DSP notebooks (Exercises 3.1, 3.2, 3.3) focused on signal analysis and transformation workflows in Python.</p>
+  <div class="site-shell">
+    <nav class="top-nav">
+      <a href="../index.html">Back to portfolio</a>
+    </nav>
 
-    <section class="section">
-      <h2>Report Summary</h2>
-      <div class="summary">
-        <p>This project contains three notebook-based DSP tasks implemented with the ThinkDSP toolkit. The exercises focus on practical frequency-domain analysis, filtering behavior, and interpretation of signal transformations through plots and computed features.</p>
+    <header class="page-hero">
+      <p class="eyebrow">Project 6</p>
+      <h1>DSP Exercises with ThinkDSP</h1>
+      <p class="page-subtitle">
+        Three notebook-based DSP tasks focused on frequency-domain interpretation, filtering,
+        and signal transformation workflows in Python.
+      </p>
+      <div class="meta-row">
+        <span class="pill pill-accent">Python DSP</span>
+        <span class="pill">ThinkDSP</span>
+        <span class="pill">Notebook Analysis</span>
+      </div>
+    </header>
+
+    <section class="content-card">
+      <div>
+        <p class="mini-label">Report Summary</p>
+        <div class="summary-box">
+          <p>
+            These exercises apply practical DSP techniques with visual and numerical interpretation
+            to better understand spectrum behavior and transformation effects.
+          </p>
+          <ul>
+            <li>Task 1 studies baseline signal characteristics and frequency representation.</li>
+            <li>Task 2 explores filtering behavior and resulting waveform/spectrum changes.</li>
+            <li>Task 3 analyzes additional transformations and their interpreted DSP meaning.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="preview-panel">
+        <h2 class="preview-title">Notebook Preview</h2>
+        <p class="preview-caption">Embedded Task 1, Task 2, and Task 3 exports.</p>
+        <div class="embed-stack">
+          <div class="embed-card">
+            <h3 class="embed-title">Task 1</h3>
+            <iframe class="embed-frame tall" src="Task1.html" title="Task 1"></iframe>
+          </div>
+          <div class="embed-card">
+            <h3 class="embed-title">Task 2</h3>
+            <iframe class="embed-frame tall" src="Task2.html" title="Task 2"></iframe>
+          </div>
+          <div class="embed-card">
+            <h3 class="embed-title">Task 3</h3>
+            <iframe class="embed-frame tall" src="Task3.html" title="Task 3"></iframe>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Notebook HTML (Embedded)</h2>
-      <div class="viewer">
-        <h3>Task 1</h3>
-        <iframe src="Task1.html" title="Task 1 HTML"></iframe>
-      </div>
-      <div class="viewer">
-        <h3>Task 2</h3>
-        <iframe src="Task2.html" title="Task 2 HTML"></iframe>
-      </div>
-      <div class="viewer">
-        <h3>Task 3</h3>
-        <iframe src="Task3.html" title="Task 3 HTML"></iframe>
-      </div>
-    </section>
-  </main>
+    <footer class="repo-footer">Signal Processing Portfolio</footer>
+  </div>
+  <script src="../embed-resize.js"></script>
 </body>
 </html>

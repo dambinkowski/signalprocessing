@@ -3,59 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project 4 - Interactive Audio Visualizer</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0d1117; color: #c9d1d9; }
-    nav { padding: 14px 20px; background: #161b22; border-bottom: 1px solid #30363d; }
-    nav a { color: #58a6ff; text-decoration: none; }
-    main { max-width: 980px; margin: 0 auto; padding: 28px 20px 40px; }
-    h1 { color: #e6edf3; margin-bottom: 10px; }
-    .desc { color: #8b949e; margin-bottom: 22px; line-height: 1.6; }
-    .section { margin-top: 20px; }
-    .section h2 { font-size: 1rem; color: #58a6ff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
-    .summary { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 14px; line-height: 1.65; }
-    .summary ul { margin-left: 18px; margin-top: 8px; }
-    .summary li { margin: 6px 0; }
-    .viewer { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 10px; margin-bottom: 14px; }
-    .viewer h3 { color: #e6edf3; font-size: 0.95rem; margin-bottom: 8px; }
-    iframe { width: 100%; min-height: 760px; border: 1px solid #30363d; border-radius: 6px; background: #fff; }
-    .codeframe { min-height: 460px; background: #0d1117; }
-  </style>
+  <title>Project 4 | Interactive Audio Visualizer</title>
+  <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <nav><a href="../index.html">Back to Portfolio</a></nav>
-  <main>
-    <h1>Project 4: Interactive Audio Visualizer</h1>
-    <p class="desc">A p5.js audio application with interactive playback and visual response to signal behavior.</p>
+  <div class="site-shell">
+    <nav class="top-nav">
+      <a href="../index.html">Back to portfolio</a>
+    </nav>
 
-    <section class="section">
-      <h2>Report Summary</h2>
-      <div class="summary">
-        <p>The report starts with Audacity workflow fundamentals and then transitions to the web implementation. It covers recording, editing, applying effects, and exporting audio before integrating those concepts into an interactive browser app.</p>
-        <ul>
-          <li>Explains practical audio preparation steps: cleanup, effect processing, and export settings.</li>
-          <li>Applies signal interpretation to a p5.js visualization pipeline.</li>
-          <li>Uses logarithmic volume behavior to better match human loudness perception.</li>
-        </ul>
+    <header class="page-hero">
+      <p class="eyebrow">Project 4</p>
+      <h1>Interactive Audio Visualizer</h1>
+      <p class="page-subtitle">
+        A p5.js web app that reacts to sound playback with interactive visual patterns and
+        logarithmic volume behavior for perceptual smoothness.
+      </p>
+      <div class="meta-row">
+        <span class="pill pill-accent">Web Audio</span>
+        <span class="pill">p5.js + p5.sound</span>
+        <span class="pill">Interactive Visuals</span>
+      </div>
+    </header>
+
+    <section class="content-card">
+      <div>
+        <p class="mini-label">Report Summary</p>
+        <div class="summary-box">
+          <p>
+            The project bridges audio editing fundamentals and live browser graphics by combining
+            prepared audio assets with real-time signal-driven rendering.
+          </p>
+          <ul>
+            <li>Covers recording, cleaning, effects, and export workflow in Audacity.</li>
+            <li>Maps signal behavior to visual parameters in a p5.js rendering loop.</li>
+            <li>Applies logarithmic volume control to better match human loudness perception.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="preview-panel">
+        <h2 class="preview-title">Live Demo and Code</h2>
+        <p class="preview-caption">Embedded app preview and sketch source.</p>
+        <div class="embed-stack">
+          <div class="embed-card">
+            <h3 class="embed-title">Project 4 App</h3>
+            <iframe class="embed-frame" src="app/index.html" title="Project 4 App"></iframe>
+          </div>
+          <div class="embed-card">
+            <h3 class="embed-title">Main Sketch Source</h3>
+            <iframe class="embed-frame code" src="app/scripts/sketch.js" title="Project 4 Sketch"></iframe>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Live Demo (Embedded)</h2>
-      <div class="viewer">
-        <h3>Project 4 App</h3>
-        <iframe src="app/index.html" title="Project 4 App"></iframe>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Code (Embedded)</h2>
-      <div class="viewer">
-        <h3>Main Sketch Source</h3>
-        <iframe class="codeframe" src="app/scripts/sketch.js" title="Project 4 Sketch Code"></iframe>
-      </div>
-    </section>
-  </main>
+    <footer class="repo-footer">Signal Processing Portfolio</footer>
+  </div>
+  <script src="../embed-resize.js"></script>
 </body>
 </html>
