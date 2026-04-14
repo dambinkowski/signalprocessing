@@ -1,0 +1,36 @@
+	-  Report -
+Following files had to be adjusted:
+
+Last_man_on_earth_1964
+- mov video format should be mp4
+- prores video codec should be h264
+- 24000/1001 frame rate should be 25/1
+- 9285191 video bit rate should be no more than 5242880
+- pcm_s16le audio codec should be aac
+
+Voyage_to_the_Planet_of_Prehistoric_Women
+- hevc video codec should be h264
+- 30000/1001 frame rate should be 25/1
+- 8038857 video bit rate should be no more than 5242880
+- mp3 audio codec should be aac
+- 320000 audio bit rate should be less than 262144
+
+The_Gun_and_the_Pulpit
+- avi video format should be mp4
+- rawvideo video codec should be h264
+- 720 width should be 640
+- 404 height should be 360
+- N/A aspect ratio should be 16:9
+- 87438878 video bit rate should be no more than 5242880
+- pcm_s16le audio codec should be aac
+- unknown audio chanels should be stereo
+
+Cosmos_War_of_the_Planets
+- 30000/1001 frame rate should be 25/1
+- 628 width should be 640
+- 354 height should be 360
+- 314:177 aspect ratio should be 16:9
+- 317103 audio bit rate should be less than 262144
+
+The_Hill_Gang_Rides_Again
+- 7537730 video bit rate should be no more than 5242880

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 5 – Audio Feature Extraction App</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0d1117; color: #c9d1d9; min-height: 100vh; }
+    nav { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.85rem 1.5rem; }
+    nav a { color: #58a6ff; text-decoration: none; font-size: 0.9rem; }
+    nav a:hover { text-decoration: underline; }
+    header { padding: 2.5rem 2rem 2rem; border-bottom: 1px solid #21262d; }
+    header .num { font-size: 0.75rem; font-weight: 600; color: #58a6ff; text-transform: uppercase; letter-spacing: 1px; }
+    header h1 { font-size: 1.8rem; font-weight: 700; color: #e6edf3; margin-top: 0.3rem; }
+    header p { color: #8b949e; margin-top: 0.5rem; font-size: 0.95rem; line-height: 1.6; max-width: 640px; }
+    main { max-width: 800px; margin: 2.5rem auto; padding: 0 1.5rem; }
+    .file-list { display: flex; flex-direction: column; gap: 1rem; }
+    .file-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.2rem 1.5rem; display: flex; align-items: center; justify-content: space-between; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+    .file-card:hover { border-color: #58a6ff; }
+    .file-card h3 { font-size: 1rem; color: #e6edf3; }
+    .file-card p { font-size: 0.82rem; color: #8b949e; margin-top: 0.25rem; }
+    .btn { background: #58a6ff; border: none; color: #0d1117; padding: 0.4rem 1.2rem; border-radius: 6px; font-size: 0.82rem; font-weight: 600; white-space: nowrap; }
+  </style>
+</head>
+<body>
+  <nav><a href="../index.html">← Portfolio</a></nav>
+  <header>
+    <span class="num">Project 5</span>
+    <h1>Audio Feature Extraction App</h1>
+    <p>Real-time audio feature extraction in the browser using p5.js and the Meyda audio analysis library. Visualizes acoustic features such as spectral centroid, RMS energy, and more.</p>
+  </header>
+  <main>
+    <div class="file-list">
+      <a class="file-card" href="app/index.html">
+        <div>
+          <h3>Launch App</h3>
+          <p>Open the real-time audio feature extraction app in your browser.</p>
+        </div>
+        <span class="btn">Open App</span>
+      </a>
+    </div>
+  </main>
+</body>
+</html>
