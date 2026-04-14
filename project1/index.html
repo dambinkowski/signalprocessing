@@ -3,50 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project 1 – Moving Car Detection & Tracking</title>
+  <title>Project 1 - Moving Car Detection and Tracking</title>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0d1117; color: #c9d1d9; min-height: 100vh; }
-    nav { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.85rem 1.5rem; }
-    nav a { color: #58a6ff; text-decoration: none; font-size: 0.9rem; }
-    nav a:hover { text-decoration: underline; }
-    header { padding: 2.5rem 2rem 2rem; border-bottom: 1px solid #21262d; }
-    header .num { font-size: 0.75rem; font-weight: 600; color: #58a6ff; text-transform: uppercase; letter-spacing: 1px; }
-    header h1 { font-size: 1.8rem; font-weight: 700; color: #e6edf3; margin-top: 0.3rem; }
-    header p { color: #8b949e; margin-top: 0.5rem; font-size: 0.95rem; line-height: 1.6; max-width: 640px; }
-    main { max-width: 800px; margin: 2.5rem auto; padding: 0 1.5rem; }
-    .file-list { display: flex; flex-direction: column; gap: 1rem; }
-    .file-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.2rem 1.5rem; display: flex; align-items: center; justify-content: space-between; text-decoration: none; color: inherit; transition: border-color 0.2s; }
-    .file-card:hover { border-color: #58a6ff; }
-    .file-card h3 { font-size: 1rem; color: #e6edf3; }
-    .file-card p { font-size: 0.82rem; color: #8b949e; margin-top: 0.25rem; }
-    .btn { background: #21262d; border: 1px solid #30363d; color: #58a6ff; padding: 0.4rem 1rem; border-radius: 6px; font-size: 0.82rem; white-space: nowrap; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0d1117; color: #c9d1d9; }
+    nav { padding: 14px 20px; background: #161b22; border-bottom: 1px solid #30363d; }
+    nav a { color: #58a6ff; text-decoration: none; }
+    main { max-width: 900px; margin: 0 auto; padding: 28px 20px 40px; }
+    h1 { color: #e6edf3; margin-bottom: 10px; }
+    .desc { color: #8b949e; margin-bottom: 26px; line-height: 1.6; }
+    .section { margin-top: 22px; }
+    .section h2 { font-size: 1rem; color: #58a6ff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .summary { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 14px; line-height: 1.65; color: #c9d1d9; }
+    .summary ul { margin-left: 18px; margin-top: 8px; }
+    .summary li { margin: 6px 0; }
+    .viewer { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 10px; margin-bottom: 14px; }
+    .viewer h3 { color: #e6edf3; font-size: 0.95rem; margin-bottom: 8px; }
+    iframe { width: 100%; min-height: 860px; border: 1px solid #30363d; border-radius: 6px; background: #fff; }
   </style>
 </head>
 <body>
-  <nav><a href="../index.html">← Portfolio</a></nav>
-  <header>
-    <span class="num">Project 1</span>
-    <h1>Moving Car Detection &amp; Tracking</h1>
-    <p>Detect and track moving cars in video frames using image signal processing. Extends to count vehicles moving toward a city center.</p>
-  </header>
+  <nav><a href="../index.html">Back to Portfolio</a></nav>
   <main>
-    <div class="file-list">
-      <a class="file-card" href="exercise1.1.html">
-        <div>
-          <h3>Exercise 1.1 – Detect &amp; Track Moving Cars</h3>
-          <p>Initial detection and tracking of vehicles across video frames.</p>
-        </div>
-        <span class="btn">View Notebook</span>
-      </a>
-      <a class="file-card" href="exercise1.2.html">
-        <div>
-          <h3>Exercise 1.2 – Count Cars Moving to City Center</h3>
-          <p>Extended analysis: determine direction of movement and count inbound vehicles.</p>
-        </div>
-        <span class="btn">View Notebook</span>
-      </a>
-    </div>
+    <h1>Project 1: Moving Car Detection and Tracking</h1>
+    <p class="desc">Detect moving cars in video and track their direction. This project also counts vehicles moving toward the city center.</p>
+
+    <section class="section">
+      <h2>Report</h2>
+      <div class="summary">
+        <p>The report explains two motion-detection approaches: frame differencing and background subtraction. Both methods compare pixel values between frames to isolate moving objects while suppressing static background content.</p>
+        <ul>
+          <li>Task 1 pipeline: convert each frame to grayscale, apply blur for noise reduction, use a background frame, compute frame difference, and detect contours for moving cars.</li>
+          <li>Task 2 extends the method with a region of interest to count cars moving toward downtown on a two-way road.</li>
+          <li>The counting logic includes a cooldown window across frames so one car is not counted multiple times and short detection glitches are ignored.</li>
+          <li>Final outputs include detected car counts and normalized rate metrics based on video duration.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Notebook HTML (Embedded)</h2>
+      <div class="viewer">
+        <h3>Exercise 1.1</h3>
+        <iframe src="exercise1.1.html" title="Exercise 1.1 HTML"></iframe>
+      </div>
+      <div class="viewer">
+        <h3>Exercise 1.2</h3>
+        <iframe src="exercise1.2.html" title="Exercise 1.2 HTML"></iframe>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Code</h2>
+      <div class="summary">
+        <p>The full code and outputs are shown directly above through the embedded notebook HTML files, so you do not need to open separate links.</p>
+      </div>
+    </section>
   </main>
 </body>
 </html>
